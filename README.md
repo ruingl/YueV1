@@ -6,7 +6,6 @@ YueV1 is a versatile and customizable chatbot engine for Facebook Messenger, pow
 
 - **Command System:** Easily create, manage, and execute commands with a flexible command system.
 - **API Integration:** Utilizes APIs for AI, messaging, and more to enhance its capabilities.
-- **Command Installer:** Install custom commands on-the-fly using `yue-cmd install` command.
 
 ## Getting Started
 
@@ -40,15 +39,6 @@ Example:
 :ai How does photosynthesis work?
 ```
 
-### `:prefix`
-
-Get the bot's current command prefix.
-
-Example:
-```
-:prefix
-```
-
 ### `:help`
 
 View a list of available commands and their descriptions.
@@ -58,21 +48,17 @@ Example:
 :help
 ```
 
-## box.?? docs
-<a href="box-function.md">DOCUMENTATION HERE</a>
+### `prefix`
 
-## Command Installer
-
-To install a new command, use the `yue-cmd install` command:
-
-```
-:yue-cmd install [code or Pastebin URL] [commandName].js
-```
+Get the bot's current command prefix.
 
 Example:
 ```
-:yue-cmd install https://pastebin.com/raw/kM89du87 test.js
+prefix
 ```
+
+## box.?? docs
+<a href="box-function.md">DOCUMENTATION HERE</a>
 
 ## Credits
 
@@ -85,4 +71,4 @@ A special thanks to the creators and contributors of these APIs for their valuab
 
 ## License
 
-This project is licensed under the ISC License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
