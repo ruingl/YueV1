@@ -12,11 +12,13 @@ YueV1 is a versatile and customizable chatbot engine for Facebook Messenger, pow
 To get started with YueV1, follow these steps:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/ruihq/YueV1.git
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
@@ -35,6 +37,7 @@ To get started with YueV1, follow these steps:
 Ask the chatbot a question, and it will generate a response using the AI API.
 
 Example:
+
 ```
 :ai How does photosynthesis work?
 ```
@@ -44,6 +47,7 @@ Example:
 View a list of available commands and their descriptions.
 
 Example:
+
 ```
 :help
 ```
@@ -53,11 +57,13 @@ Example:
 Get the bot's current command prefix.
 
 Example:
+
 ```
 prefix
 ```
 
 ## box.?? docs
+
 <a href="box-function.md">DOCUMENTATION HERE</a>
 
 ## Credits
