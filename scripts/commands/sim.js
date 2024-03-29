@@ -9,7 +9,7 @@ module.exports = {
   },
 
   run: async ({ api, event, args }) => {
-    const message = args.join(" "); // Extract message text from command arguments
+    const message = args.join(" ");
 
     if (!message) {
       api.sendMessage(

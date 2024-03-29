@@ -74,6 +74,7 @@ login({ appState: loadAppState() }, (err, api) => {
     };
 
     const { commands } = global.Yue;
+    const PREFIX = global.Yue.botPrefix;
 
     try {
       if (event.body && event.body.toLowerCase() === "prefix") {
