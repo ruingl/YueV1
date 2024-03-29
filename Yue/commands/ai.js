@@ -1,14 +1,16 @@
 const axios = require("axios");
+const { botPrefix } = global.Yue;
 
 module.exports = {
-  config: {
+  metadata: {
     name: "ai",
     description: "Interact with an AI to get responses to your questions.",
     usage: "ai <question>",
+    author: "Rui",
+    role: "0",
   },
 
-  run: async (context) => {
-    const { api, event, args } = context;
+  onRun: async ({ api, event, args, box }) => {
     const arg = args.join(" ");
 
     if (args) {
@@ -19,20 +21,14 @@ module.exports = {
           )}`,
         );
         const aiResponse = response.data.reply;
-        api.sendMessage(aiResponse, event.threadID, event.messageID);
+        box.reply(aiResponse);
       } catch (error) {
         console.error("Error fetching AI response:", error);
-        api.sendMessage(
-          "Failed to get AI response. Please try again later.",
-          event.threadID,
-          event.messageID,
-        );
+        box.reply("Failed to get AI response. Please try again later.");
       }
     } else {
-      api.sendMessage(
-        "Please provide a question after the command. For example: `ai Hello`",
-        event.threadID,
-        event.messageID,
+      box.reply(
+        `Please provide a question after the command. For example: \`${botPrefix}ai Hello\``
       );
     }
   },
